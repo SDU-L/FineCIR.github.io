@@ -180,21 +180,47 @@
     </div>
   </section>
   <!-- End paper abstract -->
-
-  <!-- <section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+  <!-- 
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Composed Image Retrieval (CIR) facilitates image retrieval through a multimodal query consisting of a
+              reference image
+              and modification text. The reference image defines the retrieval context, while the modification text
+              specifies desired
+              alterations. However, existing CIR datasets predominantly employ coarse-grained modification text
+              (CoarseMT), which
+              inadequately captures fine-grained retrieval intents. This limitation introduces two key challenges: (1)
+              ignoring
+              detailed differences leads to imprecise positive samples, and (2) greater ambiguity arises when retrieving
+              visually
+              similar images. These issues degrade retrieval accuracy, necessitating manual result filtering or repeated
+              queries. To
+              address these limitations, we develop a robust fine-grained CIR data annotation pipeline that minimizes
+              imprecise
+              positive samples and enhances CIR systems' ability to discern modification intents accurately. Using this
+              pipeline, we
+              refine the FashionIQ and CIRR datasets to create two fine-grained CIR datasets: Fine-FashionIQ and
+              Fine-CIRR.
+              Furthermore, we introduce FineCIR, the first CIR framework explicitly designed to parse the modification
+              text. FineCIR
+              effectively captures fine-grained modification semantics and aligns them with ambiguous visual entities,
+              enhancing
+              retrieval precision. Extensive experiments demonstrate that FineCIR consistently outperforms
+              state-of-the-art CIR
+              baselines on both fine-grained and traditional CIR benchmark datasets. Our FineCIR code and fine-grained
+              CIR datasets
+              are available at https://github.com/SDU-L/FineCIR.git.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
+  </section> -->
 
   <!-- Intro -->
   <section class="hero is-small">
@@ -268,12 +294,24 @@
         <div class="item">
           <!-- Your image here -->
           <img src="static/images/FineCIR.png" alt="MY ALT TEXT" />
+          <h2 class="subtitle has-text-centered">
+            Performance comparison on Fine-FashionIQ and Fine-CIRR relative to R@K(%). The overall best
+            results are in
+            bold, while the best results over baselines are underlined. The Avg metric in Fine-CIRR denotes (R@5 +
+            Rsubset@1) / 2.
+          </h2>
         </div>
         <div class="columns is-centered has-text-centered">
           <div class="column is-three-fifths">
             <div class="item">
               <!-- Your image here -->
               <img src="static/images/CIR.png" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Performance comparison on original FashionIQ and CIRR relative to R@K(%). The overall best
+                results are in bold,
+                while the best results over baselines are underlined. The Avg metric in CIRR denotes (R@5 + Rsubset@1) /
+                2.
+              </h2>
             </div>
           </div>
         </div>
@@ -283,6 +321,11 @@
             <div class="item">
               <!-- Your image here -->
               <img src="static/images/dataset_statistics.png" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Statistics of fine-grained datasets for CIR compared to two classic CIR datasets, FashionIQ and CIRR. MT
+                length∗ denotes
+                the average length of modification texts in the dataset.
+              </h2>
             </div>
           </div>
         </div>
@@ -290,7 +333,7 @@
         <br>
 
         <div class="columns is-centered has-text-centered">
-          <div class="column is-6">
+          <div class="column is-9">
             <img src="static/images/reduce_im_positive_samples.png" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               Capability of reducing the imprecise positive samples by using the fine-grained modification text
@@ -300,7 +343,7 @@
         </div>
 
         <div class="columns is-centered has-text-centered">
-          <div class="column is-5">
+          <div class="column is-9">
             <img src="static/images/coarse_fine.png" alt="MY ALT TEXT" />
             <h2 class="subtitle has-text-centered">
               Comparison of the characteristics of coarse-grained CIR and fine-grained CIR.
