@@ -1,1 +1,0 @@
-# LEMA: LMT-oriented Entity Mapping Network for Long-text Composed Image Retrieval
